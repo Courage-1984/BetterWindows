@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\ForceDelete]
+@="Force Delete Folder"
+"Icon"="imageres.dll,-5302"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ForceDelete\command]
+@="\"C:\\Program Files\\Git\\bin\\bash.exe\" -c \"rm -rf '%V'\""

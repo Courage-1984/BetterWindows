@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+; Adds "Restart Explorer" to Desktop Background context menu
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\RestartExplorer]
+"Icon"="shell32.dll,-221"
+"Position"="Bottom"
+"MUIVerb"="Restart Explorer"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\RestartExplorer\command]
+@="taskkill /f /im explorer.exe & start explorer.exe"
+
+; Adds "Restart Explorer" to Folder Background context menu
+[HKEY_CLASSES_ROOT\Directory\Background\shell\RestartExplorer]
+"Icon"="shell32.dll,-221"
+"Position"="Bottom"
+"MUIVerb"="Restart Explorer"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\RestartExplorer\command]
+@="taskkill /f /im explorer.exe & start explorer.exe"

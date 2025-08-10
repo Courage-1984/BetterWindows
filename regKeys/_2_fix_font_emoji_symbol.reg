@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink]
+"Segoe UI Emoji"="Segoe UI Emoji"
+"Segoe UI Symbol"="Segoe UI Symbol"
+

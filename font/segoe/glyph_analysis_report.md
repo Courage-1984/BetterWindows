@@ -1,0 +1,39 @@
+# Glyph Table Analysis Report
+
+## Font Summary
+
+### segoe-ui-emoji
+
+
+### Segoemoji
+
+
+### segoe_ui_unknown
+
+
+### segoe_ui_Win11_InsiderPreview
+
+
+## Individual Font Analysis
+
+### segoe-ui-emoji
+
+### Segoemoji
+
+### segoe_ui_unknown
+
+### segoe_ui_Win11_InsiderPreview
+
+## Font Comparisons
+
+### segoe-ui-emoji_vs_Segoemoji
+
+### segoe-ui-emoji_vs_segoe_ui_unknown
+
+### segoe-ui-emoji_vs_segoe_ui_Win11_InsiderPreview
+
+### Segoemoji_vs_segoe_ui_unknown
+
+### Segoemoji_vs_segoe_ui_Win11_InsiderPreview
+
+### segoe_ui_unknown_vs_segoe_ui_Win11_InsiderPreview
