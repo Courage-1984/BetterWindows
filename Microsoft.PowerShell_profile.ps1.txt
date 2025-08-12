@@ -52,3 +52,11 @@ Clear-Host
 Write-Host "☕ Welcome back, $env:USERNAME! Today is $(Get-Date -Format 'dddd, MMMM dd yyyy, HH:mm')" -ForegroundColor Magenta
 Write-Host "🚀 Have a productive session with Catppuccin Mocha vibes!" -ForegroundColor Green
 
+# Define the path to your ASCII art file
+$asciiArtFile = "C:/Users/anon/Documents/6ix9ine_asciii.txt"
+
+# Check if the file exists before attempting to read it
+if (Test-Path $asciiArtFile) {
+    # Read the contents of the file and display them
+    Get-Content $asciiArtFile
+}
