@@ -1,9 +1,15 @@
+# Optional: clear the screen on new terminal launch immediately
+Clear-Host
+
 Import-Module -Name Terminal-Icons
 Import-Module PSReadLine
+Import-Module PSFzf
+Import-Module posh-git
+
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle InlineView
 
-# Navigation helpers (functions because Set-Alias doesn't accept parameters)
+# Navigation helpers
 function .. { Set-Location .. }
 function ... { Set-Location ../.. }
 
@@ -13,17 +19,11 @@ function o { explorer.exe . }
 # Git status shortcut function
 function gs { git status }
 
-# Clear terminal shortcut alias is fine
-Set-Alias cls Clear-Host
-
-Import-Module PSFzf
-Import-Module posh-git
-
 # PSReadLine key bindings for history search
 Set-PSReadLineKeyHandler -Key Ctrl+R -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key Ctrl+S -Function HistorySearchForward
 
-# PSReadLine colors (removed invalid ConsoleInformation key)
+# PSReadLine Catppuccin Mocha colors
 Set-PSReadLineOption -Colors @{
     Command            = '#D9A6FF'
     Parameter          = '#F5C2E7'
@@ -40,23 +40,15 @@ Set-PSReadLineOption -Colors @{
     Error              = '#F28FAD'
 }
 
-
 # Oh-My-Posh standalone CLI initialization
-# Make sure Oh-My-Posh CLI is installed and in your PATH
-oh-my-posh init pwsh --config "C:/Users/anon/Documents/.poshthemes/catppuccin-mocha.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:USERPROFILE\Documents\.poshthemes\catppuccin-mocha.omp.json" | Invoke-Expression
 
-# Optional: clear the screen on new terminal launch
-Clear-Host
-
-# Custom startup message with valid console colors
+# Custom startup message
 Write-Host "☕ Welcome back, $env:USERNAME! Today is $(Get-Date -Format 'dddd, MMMM dd yyyy, HH:mm')" -ForegroundColor Magenta
 Write-Host "🚀 Have a productive session with Catppuccin Mocha vibes!" -ForegroundColor Green
 
-# Define the path to your ASCII art file
-$asciiArtFile = "C:/Users/anon/Documents/6ix9ine_asciii.txt"
-
-# Check if the file exists before attempting to read it
+# ASCII Art Injection
+$asciiArtFile = "$env:USERPROFILE\Documents\6ix9ine_asciii.txt"
 if (Test-Path $asciiArtFile) {
-    # Read the contents of the file and display them
     Get-Content $asciiArtFile
 }

@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Restore "Copy to folder" and "Move to folder" in the right-click menu (Shift+right-click or classic menu).
+
+[HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\CopyTo]
+@="{C2FBB630-0801-11d1-A66E-00C04FD706D1}"
+
+[HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\MoveTo]
+@="{D969A300-E7FF-11d0-A93B-00C04FD706D1}"

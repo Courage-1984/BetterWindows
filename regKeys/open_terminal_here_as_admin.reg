@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; Right-click folder background or folder -> Open Terminal here as Admin (Windows Terminal)
+; Requires Windows Terminal (wt.exe) on PATH.
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenTerminalAdmin]
+@="Open Terminal here as Admin"
+"Icon"="shell32.dll,-16758"
+"HasLUAShield"=""
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenTerminalAdmin\command]
+@="powershell -NoProfile -WindowStyle Hidden -Command \"Start-Process wt -Verb RunAs -ArgumentList '-d \"\"%V\"\"'\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenTerminalAdmin]
+@="Open Terminal here as Admin"
+"Icon"="shell32.dll,-16758"
+"HasLUAShield"=""
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenTerminalAdmin\command]
+@="powershell -NoProfile -WindowStyle Hidden -Command \"Start-Process wt -Verb RunAs -ArgumentList '-d \"\"%1\"\"'\""

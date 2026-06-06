@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; Restore the classic full right-click context menu on Windows 11.
+; Includes both CLSIDs: pre- and post-24H2 builds.
+; Sign out/in or restart Explorer to apply.
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
+@=""
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{e2bf9670-8b45-11d0-8b4b-00a0c90f271}\InprocServer32]
+@=""

@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Avoid thumbnail database writes on network folders (reduces corruption/slowdown on SMB shares).
+; For local thumbnail cache cleanup, run clear_thumbcache.ps1.
+
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer]
+"DisableThumbsDBOnNetworkFolders"=dword:00000001

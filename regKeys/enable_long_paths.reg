@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Enable Win32 long paths (>260 characters). Requires Administrator to merge.
+; Reboot recommended after applying.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+"LongPathsEnabled"=dword:00000001

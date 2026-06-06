@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+; Reduce taskbar clutter: Widgets, Copilot, and related news/interests surfaces.
+; HKLM key requires Administrator. Restart Explorer or sign out/in after merging.
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"TaskbarDa"=dword:00000000
+"ShowCopilotButton"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\WindowsCopilot]
+"TurnOffWindowsCopilot"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh]
+"AllowNewsAndInterests"=dword:00000000

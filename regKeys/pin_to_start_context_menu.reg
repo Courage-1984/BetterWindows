@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Adds "Pin to Start" when right-clicking files (Shift+right-click on Win 11 compact menu).
+; Based on TheWindowsClub / PF2SW10; works on Windows 10 and 11.
+
+[HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\PintoStartScreen]
+@="{470C0EBD-5D73-4d58-9CED-E91E22E23282}"
